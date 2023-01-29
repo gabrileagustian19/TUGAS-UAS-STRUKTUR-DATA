@@ -1,0 +1,48 @@
+* SortCode Binary Search
+1. #include <iostream>
+2. #include <array>
+3. #include <algorithm>
+4.
+5. using namespace std;
+6. // ukuran dari array
+7. const int dataList = 20;
+8.
+9. // function untuk menampilkan seluruh nilai Array
+10. void getData (array <int, dataList> data) {
+11. cout << "Data : ";
+12. for (int &a : data) {
+13. cout << a << " ";
+14. }
+15. cout << endl;
+16. }
+17. int main() {
+18. // deklarasi variabel
+19. array <int, dataList> data = 
+{21,12,34,5,65,17,45,34,13,90,54,11,2,-98,234,-91,-45,33,76,135};
+20. int search;
+21. bool get;
+22.
+23. // Data Awal
+24. cout << "+++++Data Awal+++++" << endl;
+25. getData(data);
+26. cout << endl;
+27.
+28. // sort/mengurutkan nilai array
+29. sort (data.begin(), data.end());
+30.
+31. // memanggil function
+32. cout << "\n+++++Data Setelah Diurutkan+++++" << endl;
+33. getData(data);
+34. cout << "\n\n\n++++++++++++++++++++++++++++++++++++++++++++++\n";
+35. cout << "Nilai Yang Dicari Dari Data Diatas : "; cin >> search;
+36.
+37. // binary_search fungsi untuk mencari data
+38. get = binary_search (data.begin(), data.end(), search);
+39.
+40. // kondisi jika data ketemu atau tidak
+41. if (get) {
+42. cout << "\n\t||| Data Ditemukan |||" << endl;
+43. } else {
+44. cout << "\n\t||| Data Tidak Ada ! |||" << endl;
+45. } cout << "++++++++++++++++++++++++++++++++++++++++++++++\n";
+46. }
